@@ -31,13 +31,11 @@ exports.arraysAnswers = {
   removeWithoutCopy : function(arr, item) {
     var arr_cp = [];
 
-    console.log(arr);
     for(var i = 0,len = arr.length; i< len;i++){
       if(arr[i] == item){
         arr.splice(i,2);
       }  
     }
-    console.log(arr);
     return arr;
   },
 
@@ -67,19 +65,37 @@ exports.arraysAnswers = {
   },
 
   insert : function(arr, item, index) {
-
+    arr.splice(2,0,item);
+    return arr;
   },
 
   count : function(arr, item) {
-
+    var count = 0;
+    for(var i =0; i <arr.length; i++){
+      if(arr[i] == item){
+        count++
+      }
+    }
+    return count
   },
 
   duplicates : function(arr) {
-
+    // var duplicates_arr = [];
+    // console.log(arr);
+    // //var sorted_arr = arr.slice().sort();
+    // for(var i =0; i <arr.length -1; i++){
+    //   if(arr[i + 1] == arr[i]){
+    //     duplicates_arr.push(arr[i]);
+    //   }
+    // }
+    // return duplicates_arr;
   },
 
   square : function(arr) {
-
+    // console.log(arr);
+    // for(var i =0; i < arr.length; i++){
+      
+    // }
   },
 
   findAllOccurrences : function(arr, target) {
